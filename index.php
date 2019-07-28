@@ -19,12 +19,12 @@ $newFence = new Fence();
 <h2>Length -> Materials</h2>
 <p>Please enter the length of the fence you need to build:</p>
 <form action="index.php" method="get">
-    <p>Length: <input type="number" name="fence"> <input type="submit" name="length"></p>
+    <p>Length: <input type="number" step="0.01" name="fence"> <input type="submit" name="length"></p>
 </form>
 <br>
 <p><?php
     if($_GET['materials']) {
-        echo 'The materials you have provided will build a fence that is ' . $newFence->buildFence($_GET['posts'], $_GET['rails']) . 'm long.';
+        echo $newFence->buildFence($_GET['posts'], $_GET['rails']);
     }
     ?></p>
 <p><?php
