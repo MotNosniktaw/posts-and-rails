@@ -2,6 +2,8 @@
 
 require_once 'Fence.php';
 
+$newFence = new Fence();
+
 ?>
 <html>
 <head>
@@ -19,10 +21,10 @@ require_once 'Fence.php';
 <form action="index.php" method="get">
     <p>Length: <input type="number" name="fence"> <input type="submit" name="length"></p>
 </form>
-
+<br>
 <p><?php
     if($_GET['materials']) {
-        echo $newFence->buildFence($_GET['posts'], $_GET['rails']);
+        echo 'The materials you have provided will build a fence that is ' . $newFence->buildFence($_GET['posts'], $_GET['rails']) . 'm long.';
     }
     ?></p>
 <p><?php
