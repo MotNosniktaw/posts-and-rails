@@ -19,7 +19,7 @@ class Fence
     }
 
     public function calcMaterials(float $fenceLength, float $width = 0.1, float $length = 1.5) {
-        $this->rails = ceil(($fenceLength - $width) / $length) + 1;
+        $this->rails = ceil(($fenceLength - $width) / $length);
         $this->posts = $this->rails + 1;
 
         return ' To build this fence you will need ' . $this->posts . ' posts and ' . $this->rails . ' rails.';
