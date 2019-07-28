@@ -19,14 +19,12 @@
 
 <p><?php
     if($_GET['materials']) {
-        echo 'You have clicked materials';
-    } else { 'You have not clicked materials';
+        echo $newFence->buildFence($_GET['posts'], $_GET['rails']);
     }
     ?></p>
 <p><?php
     if($_GET['length']) {
-        echo 'You have clicked length';
-    } else { 'You have not clicked length';
+        echo $newFence->calcMaterials($_GET['fence']);
     }
     ?></p>
 
