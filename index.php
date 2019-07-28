@@ -16,5 +16,19 @@
 <form action="index.php" method="get">
     <p>Length: <input type="number" name="fence"> <input type="submit" name="length"></p>
 </form>
+
+<p><?php
+    if($_GET['materials']) {
+        echo 'You have clicked materials';
+    } else { 'You have not clicked materials';
+    }
+    ?></p>
+<p><?php
+    if($_GET['length']) {
+        echo 'You have clicked length';
+    } else { 'You have not clicked length';
+    }
+    ?></p>
+
 </body>
 </html>
