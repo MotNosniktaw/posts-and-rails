@@ -1,4 +1,7 @@
 <?php
+
+require_once 'Fence.php';
+
 ?>
 <html>
 <head>
