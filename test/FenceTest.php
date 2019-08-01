@@ -46,7 +46,37 @@ Class FenceCalcTest extends TestCase
         $expectedOutcome = 'To use the Fence Length Calculator function, please enter number values greater than 0.';
 
         // Execution
-        $actualOutcome = $newFence->buildFence($posts, $rails);
+        $actualOutcome = $newFence->buildFence((int)$posts, (int)$rails);
+
+        // Assertions
+        $this->assertEquals($expectedOutcome, $actualOutcome);
+
+    }
+
+    public function testMatCalc()
+    {
+        // Setup
+        $fence = 65.76;
+        $newFence = new Fence();
+        $expectedOutcome = 'To build this fence you will need 45 posts and 44 rails.';
+
+        // Execution
+        $actualOutcome = $newFence->calcMaterials($fence);
+
+        // Assertions
+        $this->assertEquals($expectedOutcome, $actualOutcome);
+
+    }
+
+    public function testMatCalcInvalidInput()
+    {
+        // Setup
+        $fence = '';
+        $newFence = new Fence();
+        $expectedOutcome = 'To use the Materials Calculator function, please enter a number value greater than 0.';
+
+        // Execution
+        $actualOutcome = $newFence->calcMaterials((float)$fence);
 
         // Assertions
         $this->assertEquals($expectedOutcome, $actualOutcome);
