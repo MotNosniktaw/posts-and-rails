@@ -23,13 +23,13 @@ $newFence = new Fence();
 </form>
 <br>
 <p><?php
-    if($_GET['materials']) {
-        echo $newFence->buildFence($_GET['posts'], $_GET['rails']);
+    if(isset($_GET['materials'])) {
+        echo $newFence->buildFence((float)$_GET['posts'], (float)$_GET['rails']);
     }
     ?></p>
 <p><?php
-    if($_GET['length']) {
-        echo $newFence->calcMaterials($_GET['fence']);
+    if(isset($_GET['length'])) {
+        echo $newFence->calcMaterials((float)$_GET['fence']);
     }
     ?></p>
 
