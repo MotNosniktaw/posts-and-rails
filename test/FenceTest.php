@@ -3,7 +3,7 @@ require_once '../Fence.php';
 
 use PHPUnit\Framework\TestCase;
 
-Class FenceCalcTest extends TestCase
+Class FenceTest extends TestCase
 {
     public function testLengthCalcMoreRails()
     {
