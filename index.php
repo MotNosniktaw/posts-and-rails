@@ -24,7 +24,7 @@ $newFence = new Fence();
 <br>
 <p><?php
     if(isset($_GET['materials'])) {
-        echo $newFence->buildFence((float)$_GET['posts'], (float)$_GET['rails']);
+        echo $newFence->buildFence((int)$_GET['posts'], (int)$_GET['rails']);
     }
     ?></p>
 <p><?php
