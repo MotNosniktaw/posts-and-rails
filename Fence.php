@@ -11,8 +11,8 @@ class Fence
 
     public function buildFence(int $post, int $rail, float $width = 0.1, float $length = 1.5) {
         if ($post > 0 && $rail > 0) {
-            if (($rail + 1) >= $post && $post >= 2 && $rail >= 1) {
-                $this->fence = $post * $length + $width;
+            if ($rail >= $post && $post >= 1 && $rail >= 1) {
+                $this->fence = ($post - 1) * $length + $width;
             } else if (($rail) <= $post && $post >= 2 && $rail >= 1) {
                 $this->fence = $rail * $length + $width;
             }
