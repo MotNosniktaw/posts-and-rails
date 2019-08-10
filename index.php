@@ -7,7 +7,7 @@ $newFence = new Fence();
 ?>
 <html>
 <head>
-
+    <title>Fence Calculator</title>
 </head>
 <body>
 <h1>Fence Length Calculator</h1>
